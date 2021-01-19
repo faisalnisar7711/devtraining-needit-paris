@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="DELETE">
+        <canvas_page/>
+        <name>Other Stuff</name>
+        <page/>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-19 09:47:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d4ca0fe52fb5201044682c6df699b64f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Other Stuff</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>pa_tabs_d4ca0fe52fb5201044682c6df699b64f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-19 09:48:50</sys_updated_on>
+    </pa_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>0db43e86dbea44100ae3ac44d4961951</instance_id>
+        <instance_name>dev97739</instance_name>
+        <name>pa_tabs_d4ca0fe52fb5201044682c6df699b64f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs"><pa_tabs action="INSERT_OR_UPDATE"><canvas_page/><name>Other Stuff</name><page/><sys_class_name>pa_tabs</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-01-19 09:47:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d4ca0fe52fb5201044682c6df699b64f</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Other Stuff</sys_name><sys_overrides/><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>pa_tabs_d4ca0fe52fb5201044682c6df699b64f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-01-19 09:48:50</sys_updated_on></pa_tabs></record_update>]]></payload>
+        <payload_hash>-1249183753</payload_hash>
+        <record_name>Other Stuff</record_name>
+        <reverted_from/>
+        <source>020bbd37db231010c1a09fd2ca961921</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-19 09:50:12</sys_created_on>
+        <sys_id>a96b83292fb5201044682c6df699b6d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771a0d42db0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-19 09:50:12</sys_updated_on>
+        <type>Tab</type>
+        <update_guid>ad1b0be553b52010d341dc057ffe8465</update_guid>
+        <update_guid_history>ad1b0be553b52010d341dc057ffe8465:-218844749,ad1b0be553b52010d341dc057ffe8465:-218844749,ad1b0be553b52010d341dc057ffe8465:-218844749,130b4be59eb52010222e8fc00203ccc4:1848471955,40fa8fe5ebb5201077aff55567d2c629:1480651666,54ca0fe54bb5201004fe95f8cfaa9d50:679900018</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Other Stuff">b56b83292fb5201044682c6df699b6e1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-19 09:50:12</sys_created_on>
+        <sys_db_object display_value="" name="pa_tabs">pa_tabs</sys_db_object>
+        <sys_id>0d762ccbd3874bf680ed5a813c647b84</sys_id>
+        <sys_metadata>d4ca0fe52fb5201044682c6df699b64f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Other Stuff</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>pa_tabs_d4ca0fe52fb5201044682c6df699b64f</sys_update_name>
+        <sys_update_version display_value="pa_tabs_d4ca0fe52fb5201044682c6df699b64f">a96b83292fb5201044682c6df699b6d0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-19 09:50:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
