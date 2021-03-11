@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to find NeedIt Tasks older than the number of days in the auto close application property, close them, and open a follow-up task for management</description>
+        <internal_name>find_and_close_long_overdue_needit_task</internal_name>
+        <label_cache>[{"name":"af549549-504a-4d58-a4a8-d636d65e928c.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"af549549-504a-4d58-a4a8-d636d65e928c.Table","label":"3➛NeedIt Task Table","reference":"x_58872_needit_needit_task","reference_display":"NeedIt Task Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"af549549-504a-4d58-a4a8-d636d65e928c.Records","label":"3➛NeedIt Task Records","reference":"x_58872_needit_needit_task","reference_display":"NeedIt Task Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"63aebcdd-11a3-4d19-97c0-9f0ca216aeae.calculated_date","label":"2➛Calculated date","reference_display":"Calculated date","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7625ebf2-9559-4768-9746-c84d3da4b479"}},{"name":"63aebcdd-11a3-4d19-97c0-9f0ca216aeae.variable","label":"2➛variable","reference_display":"variable","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ad6d0197-9297-4aa6-885f-5ad8d271a6ee"}},{"name":"Weekly_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"8f1b7fe0-c6ce-4986-929a-43c4423bfd99.property_value","label":"1➛Property value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"df4ed5e3-9366-4cad-a3ad-e54c6ce991f0"}},{"name":"1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item","label":"4➛NeedIt Task Record","reference":"x_58872_needit_needit_task","reference_display":"NeedIt Task","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"31bef4cc-3b47-4479-b024-274943b8afe8.followup_task","label":"5➛Follow-up task","reference":"x_58872_needit_needit_task","reference_display":"Follow-up task","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9151458c-6733-4cdb-bc18-f2fe70ffa68e"}},{"name":"1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.number","label":"4➛NeedIt Task Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_58872_needit_needit_task","column_name":"number"},{"name":"1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.due_date","label":"4➛NeedIt Task Record➛Due date","reference":"","reference_display":"Due date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_58872_needit_needit_task","column_name":"due_date"}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Find And Close Long Overdue NeedIt Task</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:10:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a56483d2fb2201044682c6df699b67f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Find And Close Long Overdue NeedIt Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_hub_flow_0a56483d2fb2201044682c6df699b67f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a56483d2fb2201044682c6df699b67f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0a56483d2fb2201044682c6df699b67f"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN178c08f12ff2201044682c6df699b6f8,276a48712ff2201044682c6df699b68d,6f6a48712ff2201044682c6df699b682,6f6a48712ff2201044682c6df699b689,af6a48712ff2201044682c6df699b67b"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <inputs/>
+        <inputs/>
+        <order>5</order>
+        <parent_ui_id>1e80bb75-5f24-49e8-a965-9c9a1daa2e64</parent_ui_id>
+        <subflow display_value="Handle Overdue NeedIt Tasks">c0a2c8792fb2201044682c6df699b66e</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>178c08f12ff2201044682c6df699b6f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>b65f0b0d-17de-4519-8a8a-c056e85786fa</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=178c08f12ff2201044682c6df699b6f8"/>
+    <sys_element_mapping action="delete_multiple" query="id=178c08f12ff2201044682c6df699b6f8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>needit_task</field>
+        <id>178c08f12ff2201044682c6df699b6f8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>978c08f12ff2201044682c6df699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c0a2c8792fb2201044682c6df699b66e</table>
+        <value>{{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reason</field>
+        <id>178c08f12ff2201044682c6df699b6f8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>d38c08f12ff2201044682c6df699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c0a2c8792fb2201044682c6df699b66e</table>
+        <value>NeedIt Task{{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.number}}was automatically closed because its due date date of {{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.due_date}}was older than the autoclose overdue setting of {{8f1b7fe0-c6ce-4986-929a-43c4423bfd99.property_value}}days.</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">ab6a48712ff2201044682c6df699b68c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>276a48712ff2201044682c6df699b68d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>1e80bb75-5f24-49e8-a965-9c9a1daa2e64</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=276a48712ff2201044682c6df699b68d"/>
+    <sys_element_mapping action="delete_multiple" query="id=276a48712ff2201044682c6df699b68d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>276a48712ff2201044682c6df699b68d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>e36a48712ff2201044682c6df699b690</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{af549549-504a-4d58-a4a8-d636d65e928c.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Days Ago Date">8bc5b76d2f72201044682c6df699b62a</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6f6a48712ff2201044682c6df699b682</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>63aebcdd-11a3-4d19-97c0-9f0ca216aeae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f6a48712ff2201044682c6df699b682"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b682</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>e36a48712ff2201044682c6df699b684</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value/>
+        <variable display_value="">4bc5b76d2f72201044682c6df699b62b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f6a48712ff2201044682c6df699b682"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>days_ago</field>
+        <id>6f6a48712ff2201044682c6df699b682</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>636a48712ff2201044682c6df699b684</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8bc5b76d2f72201044682c6df699b62a</table>
+        <value>{{8f1b7fe0-c6ce-4986-929a-43c4423bfd99.property_value}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6f6a48712ff2201044682c6df699b689</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>af549549-504a-4d58-a4a8-d636d65e928c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f6a48712ff2201044682c6df699b689"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b689</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>276a48712ff2201044682c6df699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>x_58872_needit_needit_task</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b689</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>636a48712ff2201044682c6df699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>2000</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f6a48712ff2201044682c6df699b689"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>2f6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>due_date&lt;{{63aebcdd-11a3-4d19-97c0-9f0ca216aeae.calculated_date}}^state=1</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6b6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>ef6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Get Property">f170b3292f72201044682c6df699b698</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>af6a48712ff2201044682c6df699b67b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>8f1b7fe0-c6ce-4986-929a-43c4423bfd99</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=af6a48712ff2201044682c6df699b67b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>af6a48712ff2201044682c6df699b67b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>a36a48712ff2201044682c6df699b67e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>x_58872_needit.autoCloseOverdue</value>
+        <variable display_value="">b170b3292f72201044682c6df699b699</variable>
+    </sys_variable_value>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN136a48712ff2201044682c6df699b675"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <name>Weekly</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>136a48712ff2201044682c6df699b675</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <trigger_definition display_value="Weekly">cf352104c32222002841b63b12d3ae1f</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>weekly</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=136a48712ff2201044682c6df699b675"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>136a48712ff2201044682c6df699b675</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>576a48712ff2201044682c6df699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>1970-01-01 23:00:00</value>
+        <variable display_value="">a745a104c32222002841b63b12d3ae18</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>136a48712ff2201044682c6df699b675</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>5f6a48712ff2201044682c6df699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>5</value>
+        <variable display_value="">c685a104c32222002841b63b12d3aed3</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN4a56483d2fb2201044682c6df699b680"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0a56483d2fb2201044682c6df699b67f</id>
+        <name>Find And Close Long Overdue NeedIt Task</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:10:31</sys_created_on>
+        <sys_id>4a56483d2fb2201044682c6df699b680</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:10:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN6f6a48712ff2201044682c6df699b682,6f6a48712ff2201044682c6df699b689,af6a48712ff2201044682c6df699b67b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Days Ago Date">8bc5b76d2f72201044682c6df699b62a</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6f6a48712ff2201044682c6df699b682</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>63aebcdd-11a3-4d19-97c0-9f0ca216aeae</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f6a48712ff2201044682c6df699b682"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b682</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>e36a48712ff2201044682c6df699b684</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value/>
+        <variable display_value="">4bc5b76d2f72201044682c6df699b62b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f6a48712ff2201044682c6df699b682"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>days_ago</field>
+        <id>6f6a48712ff2201044682c6df699b682</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>636a48712ff2201044682c6df699b684</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_8bc5b76d2f72201044682c6df699b62a</table>
+        <value>{{8f1b7fe0-c6ce-4986-929a-43c4423bfd99.property_value}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6f6a48712ff2201044682c6df699b689</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>af549549-504a-4d58-a4a8-d636d65e928c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f6a48712ff2201044682c6df699b689"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b689</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>276a48712ff2201044682c6df699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>x_58872_needit_needit_task</value>
+        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6f6a48712ff2201044682c6df699b689</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>636a48712ff2201044682c6df699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>2000</value>
+        <variable display_value="">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f6a48712ff2201044682c6df699b689"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>2f6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>due_date&lt;{{63aebcdd-11a3-4d19-97c0-9f0ca216aeae.calculated_date}}^state=1</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>6b6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>6f6a48712ff2201044682c6df699b689</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>ef6a48712ff2201044682c6df699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Get Property">f170b3292f72201044682c6df699b698</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>af6a48712ff2201044682c6df699b67b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>8f1b7fe0-c6ce-4986-929a-43c4423bfd99</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=af6a48712ff2201044682c6df699b67b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>af6a48712ff2201044682c6df699b67b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>a36a48712ff2201044682c6df699b67e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <value>x_58872_needit.autoCloseOverdue</value>
+        <variable display_value="">b170b3292f72201044682c6df699b699</variable>
+    </sys_variable_value>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN178c08f12ff2201044682c6df699b6f8"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <inputs/>
+        <inputs/>
+        <order>5</order>
+        <parent_ui_id>1e80bb75-5f24-49e8-a965-9c9a1daa2e64</parent_ui_id>
+        <subflow display_value="Handle Overdue NeedIt Tasks">c0a2c8792fb2201044682c6df699b66e</subflow>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>178c08f12ff2201044682c6df699b6f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>b65f0b0d-17de-4519-8a8a-c056e85786fa</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=178c08f12ff2201044682c6df699b6f8"/>
+    <sys_element_mapping action="delete_multiple" query="id=178c08f12ff2201044682c6df699b6f8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>needit_task</field>
+        <id>178c08f12ff2201044682c6df699b6f8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>978c08f12ff2201044682c6df699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c0a2c8792fb2201044682c6df699b66e</table>
+        <value>{{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reason</field>
+        <id>178c08f12ff2201044682c6df699b6f8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:37:38</sys_created_on>
+        <sys_id>d38c08f12ff2201044682c6df699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_c0a2c8792fb2201044682c6df699b66e</table>
+        <value>NeedIt Task{{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.number}}was automatically closed because its due date date of {{1e80bb75-5f24-49e8-a965-9c9a1daa2e64.item.due_date}}was older than the autoclose overdue setting of {{8f1b7fe0-c6ce-4986-929a-43c4423bfd99.property_value}}days.</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=0a56483d2fb2201044682c6df699b67f^sys_idNOT IN276a48712ff2201044682c6df699b68d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">ab6a48712ff2201044682c6df699b68c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Find And Close Long Overdue NeedIt Task">0a56483d2fb2201044682c6df699b67f</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>276a48712ff2201044682c6df699b68d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:37:38</sys_updated_on>
+        <ui_id>1e80bb75-5f24-49e8-a965-9c9a1daa2e64</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=276a48712ff2201044682c6df699b68d"/>
+    <sys_element_mapping action="delete_multiple" query="id=276a48712ff2201044682c6df699b68d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>276a48712ff2201044682c6df699b68d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-10 07:28:22</sys_created_on>
+        <sys_id>e36a48712ff2201044682c6df699b690</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-10 07:28:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{af549549-504a-4d58-a4a8-d636d65e928c.Records}}</value>
+    </sys_element_mapping>
+</record_update>
